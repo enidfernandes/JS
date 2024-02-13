@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes</title>
+</head>
+<body>
+    <script>
+        //ES6 has class keyword
+// classon contain a contructor, method or property
+// no variables
+        class Person{
+            // let n = 1 //unexpected toekn error
+
+            constructor(name){
+                this.name = name
+            }
+
+            // can have only one constrctor in a class in js ES6
+            // cannot overload constructor
+            // constructor(){ 
+
+            // }
+
+            getData(){
+                // return this.name
+                console.log("name = "+this.name)
+            }
+            
+        }
+        // create obj
+        var obj1 = new Person("enid");
+        // alert(obj1.getData())
+        obj1.getData()
+
+
+
+
+        class Employee{
+            constructor(fname,lname){
+                this.lname = lname        //defiend once used once
+                this._fname = fname  //defined once accessed multiple times
+
+            }
+
+            // getter function
+            get fname(){
+                return this._fname
+            }
+
+            // setter function
+            set fname(nm){
+                this._fname = nm
+            }
+
+            getData(){
+                return this._fname + " " +this.lname
+            }
+        }
+
+        var obj2 = new Employee("enid","fernandes")
+        obj2.getData()
+        obj2.fname = "carron" //stack gets full so you use ._
+        obj2.getData()
+
+
+        // to extend it --- inheritence --- cant overload but can  you override methods?
+    </script>
+    
+</body>
+</html>

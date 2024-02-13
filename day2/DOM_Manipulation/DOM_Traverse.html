@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM traversal</title>
+  </head>
+  <body>
+   
+    <ul id="myList"><li id="item1">JS</li><li>JQuery</li><li>Angular JS</li><li>Node JS</li></ul>
+
+    <button onclick="GetFirstChild()">Get First Child</button>
+    <button onclick="GetLastChild()">Get Last Child</button>
+    <button onclick="GetNextSibling()">Get Next Sibling</button>
+    <!-- find -move to nth child -->
+    
+    <button onclick="GetPrevSibling()">Get Previous Sibling</button> 
+    <button onclick="GetParentNode()">Get parent Node</button>
+<!-- not working parent node -->
+     <button onclick="GetChildNodes()">Get Child Nodes</button>
+    <button onclick="GetAttributes()">Get attributes</button>
+    <p id="demo">  </p>
+
+    <img src="./dummy.css" id="img1"/>
+    <script>
+      // when traversing there needs to be an id
+
+      function $(id) {
+        return document.getElementById(id);
+      }
+
+      function GetFirstChild() {
+        document.getElementById("demo").innerText =
+          "First child of mylist " + $("myList").firstChild.innerText;
+      }
+
+      function GetLastChild() {
+        console.log($("myList").lastChild.nodeName)
+        document.getElementById("demo").innerText =
+          "last child of mylist " + $("myList").lastChild.innerText;
+      }
+
+      function GetNextSibling() {
+        document.getElementById("demo").innerText =
+          "Next Sibling " + $("item1").nextSibling.innerText;
+      }
+      
+      function GetPrevSibling() {
+        document.getElementById("demo").innerText =
+          "Previous Sibling " + $("item2").previousSibling.innerText;
+      }
+
+      function GetParentNode(){
+        document.getElementById("demo").innerText =
+          "parent node " + $("item1").parentNode.nodeName;
+ }
+
+      function GetChildNodes(){
+
+          var count=$("myList").childNodes.length
+          var list = $('myList').childNodes
+          for(var i=0;i<count;i++){
+              document.write(list[i].innerText+"<br/>")
+          }
+      }
+
+      function GetAttributes(){
+          console.log($("img1").attributes)
+          console.log($("img1").getAttribute("src"))
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <script>
+    // detructuring -> taking out values form objects
+    let obj ={
+        name: "enid",
+        age : 22,
+
+        greet:function(){console.log("hello " +name+" ur age is "+age)}// member function
+
+    }
+
+    // its complex to extract each variables
+    // destructruing - breaking down a complex structure into simpler parts
+
+    let {nae,age,greet} = obj  // name of var should be same as data member
+    console.log(nae) //undefined cause nae isnt matching name(the obj var)
+    console.log(age)  //matches ages and ages
+    greet()
+    </script>
+</body>
+</html>

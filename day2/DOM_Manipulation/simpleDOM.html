@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="para1" style="background-color:brown; text-align: center; font-weight: 800; font-size: x-large; color:white">This is simple para!</p>
+    <script>
+        function $(id){
+            return document.getElementById(id)
+        }
+
+        document.write("child nodes of para = "+ $("para1").childNodes.length+"<br/>")
+        document.write("child of para = "+ $("para1").firstChild.nodeValue+"<br/>")
+        document.write("child of para using innerText = "+ $("para1").innerText+"<br/>")
+        document.write("type of node = "+ $("para1").nodeType+"<br/>")
+        document.write("type of node of first child of para = "+ $("para1").firstChild.nodeType+"<br/>")
+
+        // 3 types of nodes
+        // Node.ELEMENT_NODE       1. An element node like <p> or <div>
+        // Node.ATTRIBUTE_NODE     2. An attribute of an element
+        // Node.TEXT_NODE          3. the actual text inside an element or attribute
+
+
+        //this thing creates a tree structure. to traverse it....
+//--
+
+
+// wherever there is $para1 it is doc.getelebyid
+</script>
+    
+</body>
+</html>

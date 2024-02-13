@@ -1,0 +1,23 @@
+js es6 provides collections using sets and maps
+
+so basically whats happening is the first method of creating the map was a set inside 
+sets op shows no properties needs to be iterrated as its an object {}
+
+array on the other hand  [] can be viewd - it is indexed
+
+
+event handlng in js - 2 ways
+obtrusive
+unobtrusive
+
+whenever an event occurs it gets propogated intrnally and this mechanism which defines the event propogation that travels through dom tree
+
+2 types of event propogations
+event bubbling 
+event capturing
+
+body div button tags -> event propogation can go from bottom- button to div to body (inner to outer ) --- it is event bubbling
+when it bubbles up the dom tree
+
+from outer to inner that is body to div to btn it is capturing - reverse
+

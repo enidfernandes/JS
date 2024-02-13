@@ -1,0 +1,85 @@
+<!-- applying style without css -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <!-- <link href="./external.css" rel="stylesheet"/> -->
+    <!-- <style>
+        div{
+            margin: 5px;
+        }
+        p{
+            font-size:x-large;
+        }
+
+        #opener{
+            color: rgb(115, 10, 253);
+        }
+
+        .closer{
+            background-color: peachpuff;
+        }
+    </style> -->
+    <!-- changing style without css -->
+
+  </head>
+  <body>
+
+    <p id="opener">id openenr First Paragraph!</p>
+    <p>Second Paragraph</p>
+    <p class="closer">id closer third para</p>
+    <p class="closer">id closer fourth para</p>
+    <!-- <div class="closer">id closer this is div with class closer</div> -->
+
+    <div> div this is simple div</div>
+    <br />
+    <span>this is outer span</span>
+    <br />
+    <div>
+      <span> this is inner span to div </span>
+      <br />
+      <span> this is one more inner span to div </span>
+      <br />
+    </div>
+    <button id="btnChange">Change</button>
+
+    <script>
+
+      //  using style. whatever
+
+      document.getElementById("btnChange").onclick = function () {
+        var element = document.getElementById("opener");
+        
+        element.style.background = "red";
+        element.style.color = "green";
+        element.style.fontSize = "100px";
+        
+        var elements11 = document.getElementsByClassName("closer");
+        
+        for (var i in elements11) {
+          elements11[i].style.background = "yellow";
+          elements11[i].style.fontSize = "40px";
+        }
+       
+        var elements = document.getElementsByTagName("div");
+
+        for (var i in elements) {
+          elements[i].style.background = "purple";
+          elements[i].style.fontSize = "78px";
+        }
+
+        // creating a new element
+        var newElement = document.createElement("div");
+        newElement.innerText = "New div get added";
+        newElement.style.background = "green";
+        newElement.style.width = "150px";
+        document.body.appendChild(newElement); //adding the element to the page
+
+        // var element = document.getElementById("opener");
+        // document.body.removeChild(element);
+      
+    }
+    </script>
+  </body>
+</html>

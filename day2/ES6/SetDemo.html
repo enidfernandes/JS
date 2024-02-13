@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+</head>
+<body>
+    <script>
+        // sets - objects which are a collection of values. iterabele
+        // unique values
+        let set1 = new Set([1,3,2,3,4,5,4,3,4]) //set is a classs given by ES6
+        // doesnt autoorder btw
+        for(ele of set1){       //'of'
+            console.log(ele)   //value equality gets checked - unique values
+
+        }
+
+        console.log(set1)
+
+        set1.add('red')
+        set1.add(56,42)
+
+        console.log(set1) //op -- {1,....,'red'}
+
+        set1.delete('red')
+        console.log(set1) //op {1,....,5}
+
+        set1.clear()
+        console.log(set1) //op {}
+    
+
+
+
+        // create set of array - set iterable over elements
+        let set2 = new Set(['red','blue','white'])
+        console.log("using array : " + set2) //ops using array : [object Set]
+        // console.log(set2) // ops the values Set(3) {values}
+
+        // add nests
+        let set3 = new Set().add('yellow').add('black').add('cyan')
+        console.log("add nests :" +set3)  //op -- [objetc set]
+
+        // view va;ues using for of loop
+        for(ele of set2){
+            console.log(ele)
+        }
+
+// now if you need to retain the duplicate values as they represent another thing
+// for eg 2 streets with the same names as mg road for say have 2 diff addresses(references) as pune and bangalore
+// but would get fitlered out as duplkcate in sets
+// here comes maps
+    </script>
+    
+</body>
+</html>

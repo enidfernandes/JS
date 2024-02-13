@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritence</title>
+</head>
+<body>
+    <script>
+        // inheritence
+        class Person{  // base class/ super / parent class
+            constructor(name){
+                this.name = name
+            }
+            print(){
+                console.log("hello to "+this.name)
+            }
+        }
+
+        //child class
+        class Manager extends Person{
+            constructor(name,project){
+                //want to pass this value to the base/super class
+                // we use super keyword
+                super(name)
+                this.project = project
+            }
+
+            print(){ //giving same name to check whether oevrriding works?
+                // console.log("Project name = " +this.project +" and name "+this.name)
+                
+                super.print()
+                console.log("Project name = " +this.project)
+}
+        }
+
+        let obj = new Manager("enid","proj1")
+        obj.print(); //gets overridden -same func name in both clsses
+        // oevrloading is same name diff type or number of params - which js doesnt suppport
+    
+    // summary-:
+    // can override methods in es6
+    // can call parents data members as well as methods
+    // use super keyword
+    // for methods use super.method()
+    // if you want to pass value through contructor to the parent - use super(data members name)
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    <script>
+        // using a function known as constructor -- theres no class concept in es5
+        function Employee(fname,lname,city){
+            this.firstname = fname
+            this.lastname = lname
+            this.city1 = city
+
+            // member function
+            this.getFullName = function(){
+                return this.firstname + " " +this.lastname
+            }
+        }
+
+        //create obj
+        var emp1 = new Employee("enid","ferns","pune")
+        alert(emp1.getFullName())
+    </script>
+    
+</body>
+</html>

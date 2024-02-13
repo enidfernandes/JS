@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //there are 3 ways to create user defined objects in es5 
+
+
+       //1. creating object directly - without class
+       var obj1 = {}
+       obj1.id = 1
+       obj1.name = 'enid'
+       obj1.getData = function(){
+
+        return this.name
+    //     data = {name : this.name,
+    //     id:this.id}
+    //     console.log(data)
+    //     return data.name
+        
+       }
+
+       alert(obj1.getData())
+
+    //2. using object literal - key:value pair
+
+    var prod1={          //object
+        id:100,
+        name:"p1",
+        getData: function(){
+            return this.id
+        }
+    }
+    alert(obj2.getData())
+
+    //suppose you create another obj with same named methods and members
+    //but their from diff classes
+    var cust1 = {             //object
+        id:1011,
+        name:'c1',
+        getData:function(){
+            return this.id
+        }
+    }
+    alert(cust1.getData())
+   
+    //so you perform seperate abstraction on them
+    //this can be done in the third way which is via using functions
+    //these functions are called constructors!
+
+    // 3. using contructors
+
+
+//  hiding the implementation of your code from the users - data abstraction
+//  It means if we make some changes in our code, that changes should not break the dependent code.
+//   Dependent code only needs to know what it should pass to our code and what our code returns, and that’s all.
+
+
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body>
+    <script>
+        //maps - key:value pair data
+
+        let veg = {
+            name:"spinach"
+        }
+        let sweet = {
+            name:"jalebi"
+        }
+
+        // veg at mg road pune
+
+        // method1 using set() method to map object
+        let food = new Map()
+        food.set('veg1',veg)
+        food.set('sw',sweet)
+
+        console.log('method 1 ')                   //basically, this way of creating a set doesnt show any properties under entity whereas using arrays shows it
+        console.log(food)  //maps use => internally { { }, { }}
+        // prototype in console op shows all the functions related to this map
+
+
+        // using array - it shows key value pairs
+        console.log('method2 - using array set')
+        let food1 = new Map([['veg1',veg],['sw',sweet]])
+        console.log(food1)
+
+        console.log('-------------------set functions----------------------')
+        food1.set('swt',sweet)
+        console.log(food1)
+
+
+        console.log('--------------------------')
+        for(key of food1.keys()){
+            console.log(key)
+        }
+        for(key of food.keys()){
+            console.log(key)
+        }
+        for(val of food.values()){
+            console.log(val)
+        }
+        for(val of food1.values()){
+            console.log(val.name)
+        }
+        console.log('--------------------------')
+
+
+        food1.set('sw',veg) //overriding
+        console.log(food1)
+
+        food.delete('sw')
+        console.log(food)
+        console.log(food.size)
+
+        food.clear()
+        console.log(food.size)
+
+
+    </script>
+    
+</body>
+</html>
