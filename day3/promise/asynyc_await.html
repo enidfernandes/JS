@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async await</title>
+</head>
+<body>
+    <script>
+        // async - makes function return promise
+        // await - makes a function wait for promise
+        // await can be used inside async
+
+        function foo(){
+            return new Promise(resolve=>{
+                setTimeout(()=>{
+                    resolve('resolved')
+                },500)
+            })
+        }
+
+        async function asyncCall(){
+            console.log("calling to async")
+            const result = await foo()
+            console.log(result)
+        }
+        asyncCall()
+     </script>
+    
+</body>
+</html>

@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add event listener</title>
+    <style>
+        div{
+            padding: 20px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        #div1{
+            height: 200px;
+            width: 200px;
+            background: peachpuff;
+        }
+
+        #div2{
+            height: 200px;
+            width: 200px;
+            background: yellow;
+        }
+
+        #p1{
+            height: 50;
+            width: 110px;
+            background: greenyellow;
+            padding: 20px;
+        }
+
+        #p2{
+            height:50;
+            width:110px;
+            background:aliceblue;
+            padding:20px
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">
+            this is event bubbling
+        </p>
+
+    </div>
+
+    <div id="div2">
+        <p id="p2">
+            this is event capturing
+        </p>
+    </div>
+    <script>
+
+        function $(id){
+            return document.getElementById(id)
+        }
+
+
+        // inner to outer -bubbling
+        $('p1').addEventListener('click',function(evt){
+            alert('p1 is clicked')
+
+        },false)
+
+
+        // till now weve used the event and the handler function
+        $('div1').addEventListener('click',function(evt){
+            alert('div1 is clicked')
+
+        },false) //the third param of addeventlistener is for DOM traversing (upward / downwards) 
+        // - true or false - about bubbling or capturing
+        // by default it is true. that is capturing
+
+        // third param false for bubbling
+
+
+
+        $('p1').addEventListener('click',function(evt){ //same event diff handlers       -2 event handlers one event p1 getting clicked
+            alert('p1 is clicked for the second time')
+
+        },false)
+
+
+
+
+        $('p2').addEventListener('click',function(evt){
+            alert('p2 is clicked')
+
+        },true)
+
+        $('div2').addEventListener('click',function(evt){
+            alert('div2 is clicked')
+
+        },true)
+        // outer to inner -capturing
+
+        // use of add event listner
+        // 1. you can use bubbling or capturing
+        // 2. can add multiple event handlers on a single click
+    </script>
+</body>
+</html>

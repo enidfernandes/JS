@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using ajax</title>
+</head>
+<body>
+    <script>
+        const xhtr = new XMLHttpRequest() //creating an xmlhttp object
+
+        xhtr.onreadystatechange= function(){
+            if(xhtr.readyState==4 && xhtr.status==200){
+                var user = JSON.parse(xhtr.responseText)
+            console.log(user)
+            }
+        }
+    xhtr.open("GET","./emp.json", true) //fetching data, setting asynchronously true
+    xhtr.send() //send that request
+    </script>
+</body>
+</html>

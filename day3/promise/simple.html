@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <script>
+        let pr = new Promise(function(resolve,reject){
+           setTimeout(function(){ //set tiemout fnction
+            resolve('done') //value
+           },1000) //seconds
+        });
+
+// if it gets reolved in 500 ms then then executes
+        pr.then(function(value){
+            console.log('v : '+value)
+        }) //if successfully resolved value will ocme in then
+
+     </script>
+</body>
+</html>

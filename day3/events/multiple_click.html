@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function $(id)</title>
+  </head>
+  <body id="b">
+    <div id="div1">
+      <button id="btn1">Submit</button>
+      <button id="btn2">Cancel</button>
+      <button id="btn3">Reset</button>
+    </div>
+
+    <script>
+        function $(id){
+            return document.getElementById(id)
+        }
+
+        // this $() whats inside the bracket is like the scope insiide which all events inside it can get accessed
+        // so if the button is outside the div1 (consider it like a box maybe?) and if u click that btn it wont work
+        $('div1').addEventListener("click",function(evt){
+            console.log(evt)
+            alert(evt.target.id + " button is clicked")
+        })
+    </script>
+  </body>
+</html>

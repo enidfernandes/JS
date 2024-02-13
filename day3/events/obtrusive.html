@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>obtruisive events</title>
+  </head>
+  <body>
+    <div id="div1">
+      <!-- obtruivie way - writing events anf its handler in html markup -->
+    </div>
+    <button id="btn1" onclick="getElementById('div1').innerText = new Date()">
+      Date and Time
+    </button>
+
+    <div id="div2"></div>
+    <!-- to hide the handler - unobtruisive way - handler in script that includes coding part and the event that triggers it-->
+    <button id="btn2">Date and Time2</button>
+
+    <button id="btn3">Test</button>
+
+    <button id="btn4">Combined script</button>
+
+
+
+
+
+<!-- one event multiple operations -->
+<!-- two operations on the same button click -->
+<button id="btn11" ></button>
+
+
+
+
+
+
+
+    <script>
+      document.getElementById("btn2").onclick = setDate;
+
+      document.getElementById("btn3").onclick = test; //event - onclick
+
+      function setDate(evt) {
+        document.getElementById("div2").innerText = new Date();
+      }
+
+      function test(evt) {
+        //event handler
+        alert("test is called");
+      }
+
+      // combining event and event handler in the script
+      document.getElementById("btn4").addEventListener("click", setDate); //or 'click', new Date
+
+      // addEventListner -> special fucntion that handles the event first the handler and then the parameter(optional)
+    
+    
+    
+    // one trigger on click two operations
+      document.getElementById("btn11").onclick = setDate;
+
+    document.getElementById("btn11").onclick = test; //event - onclick
+    // -->doesnt work this way - only the last one is called
+
+    // -> Here addEventListener is used
+    
+    
+    
+    
+    
+    
+    </script>
+  </body>
+</html>

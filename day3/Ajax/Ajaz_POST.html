@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+        var xhttp = new XMLHttpRequest()
+
+        // data
+        var obj = {
+            "albumId":1,
+            "title": " something something ",
+            "url": "rnadom ranomd",
+            "thumbnail": "blajsmd"
+        }
+
+        xhttp.open('POST', "https://jsonplaceholder.typicode.com/album/1/photos")
+        xhttp.setRequestHeader('Content-Type','application/json');
+// when we send data using request body
+// we have to set content-type header
+
+// convert js object to string
+        xhttp.send(JSON.stringify(obj)); //sending data in request body
+        xhttp.onreadystatechange = function(){
+            if(xhttp.readyState == 4 && xhttp.status==201){
+                document.getElementById('p1').innerText =xhttp.responseText
+            }
+            
+        }
+
+        // objects that store info about whether or not event has happened yet and if
+        // happened then whats its outcome -promise
+    </script>
+    
+</body>
+</html>
