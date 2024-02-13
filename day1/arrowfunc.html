@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrow function</title>
+  </head>
+  <body>
+    <script>
+      //lambda function - replaces function call with the function definition
+
+      //arrow fnction does the same thing
+      // can implement multi or single line stmts with it
+
+      var funname = () => {
+        console.log("inside the function");
+        document.write("inside arrow function");
+      };
+
+      funname();
+
+      var sqr = (num) => {
+        document.write("<br><br>square of " + num + " is " + num * num);
+      };
+
+      sqr(4);
+
+      var Max = (num1, num2) => {
+        document.write("<br><br>");
+        if (num1 > num2) return num1;
+        else return num2;
+      };
+
+      // let sum=(x,y)=return x+y; //error cause return
+      document.write("maximum : " + Max(5, 9));
+    </script>
+  </body>
+</html>

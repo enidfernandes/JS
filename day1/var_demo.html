@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+</head>
+<body>
+    <script>
+        var a = 100;
+        var b=200.432;
+        var c = 'psl';
+        var d ='l';
+
+        var e = true;
+
+
+        document.write("value of a : " +a + "   type : "+ typeof(a));
+        document.write("<br>value of b : " +b + "    type : "+ typeof(b));
+        document.write("<br>value of c : " +c + "    type : "+ typeof(c));
+        document.write("<br>value of d : " +d + "   type : "+ typeof(d));
+
+        document.write("<br>value of e : " +e + "   type : "+ typeof(e));
+
+        var carsarr = ['nano', 'zen'];
+        // carsarr[2] = 'honda'; //arr in js is an object so use functions
+        document.write("<br><br>" + carsarr);
+        console.log(carsarr);
+        carsarr.push("HONDA");
+
+        //array with diff elements -zata
+
+        // printing array
+
+        for(let i =0;i<carsarr.length;i++){
+            document.write("<br>"+carsarr[i]);
+        }
+
+
+        var x= 10+40+"abc";
+        document.write("<br>"+x + " typeof(x) : "+typeof(x));
+        
+        var y = "abc"+10+40;
+        document.write("<br>"+y+" typeof(y) : "+typeof(y));
+    
+        
+        var checkval = '123';
+        if(checkval ==123){
+            alert("checked value only");
+        }
+        else{
+            alert("val dint match");
+        }
+        var checkvalandtype = '123';
+        if(checkval ===123){
+            alert("checked value and type");
+        }
+        else{
+            alert("val and type dint match");
+        }
+
+
+    </script>
+</body>
+</html>

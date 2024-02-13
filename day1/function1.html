@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <!-- there are 2 types of funstions func definition and func expression -->
+    <script> //within script tag all func declarations are known first at the start of the script tag before definitions - function hoisting
+        // foo();  
+
+        //function 
+
+        function foo(){        //declaration
+            alert("im in foo function");
+        } 
+
+        // foo();
+
+// function expression - assigning function to a variable
+        //doesnt support function hoisting
+        var funcexp = function(){ //function doesnt have name - anoynomous function
+            return (20000);
+        }
+
+        alert(funcexp()); //no func hoisting for this function expression concept
+
+        
+
+    </script>
+</body>
+</html>

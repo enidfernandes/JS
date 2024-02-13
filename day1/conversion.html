@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversion</title>
+</head>
+<body>
+    <script>
+        document.write("converting '123' using parseInt() : "+parseInt('123')); //123
+        document.write("<br>converting '123abc' using parseInt() : "+parseInt('123abc')); //123
+        document.write("<br>converting '123ab1c32' using parseInt() : "+parseInt('123ab1c32')); //123
+        document.write("<br>converting 'cc123ab1c32' using parseInt() : "+parseInt('cc123ab1c32')); //NaN
+
+ document.write("<br>converting 'abc' using parseInt() : "+parseInt('abc')); //NaN
+        document.write("<br>converting '123' using Number : "+ Number('123'));  //123
+        document.write("<br>converting '123ee' using Number : "+ Number('123ee')); //NaN
+
+</script>
+</body>
+</html>

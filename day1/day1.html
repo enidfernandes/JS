@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script>
+    function showPara(){
+        alert(document.readyState);
+        var ele = document.getElementById("1"); 
+        ele.innerText = "using script inhead instead of after the element"
+    }
+    document.onreadystatechange = showPara; //or window.onload = funcName   --- onload doesnt have states
+  </script>
+    <!-- <script>alert("hello from the head tag");</script> -->
+</head>
+<body>
+    <!-- <p>this is the body tag paragraph.</p> 
+    <h1>this is some content in the body tag</h1> 
+    <script>alert("hi");</script>
+     <p><b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius labore, facilis assumenda soluta repellendus asperiores perspiciatis nemo aut consequuntur quaerat architecto porro! Eaque laborum fugiat rerum placeat perferendis quidem explicabo.</b></p>
+
+     <script>alert("bye");</script>
+    <p><b>enid enid edind ediendewemfeldsd,sddsd</b></p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga veritatis, iusto assumenda dignissimos laboriosam quisquam obcaecati reiciendis qui, asperiores magnam consequuntur harum dicta eaque sunt minima tempora. Quia, facere autem.
+        Quae dolores neque laudantium maxime corporis pariatur voluptates esse eos ipsum amet nisi odio illum molestiae, animi ut iure ullam sapiente magnam suscipit fuga vero voluptatum inventore. Tempore, officia molestiae.
+        Quo accusamus beatae hic aliquam tempora, animi praesentium nostrum, mollitia enim earum suscipit reiciendis voluptatibus, voluptas quidem nesciunt ipsam dolorem dolor alias possimus non illo nulla? Voluptas aliquid quo aliquam?
+        Error, tempora accusamus cumque vero porro harum eos ullam eligendi possimus beatae hic quam nihil obcaecati ea debitis iure? Expedita repellat laborum illum iste quam corrupti ducimus. Delectus, eveniet commodi!
+        Officia doloremque necessitatibus officiis ex. Cumque, modi! Nam, officia veritatis est dicta commodi accusamus nobis iusto praesentium non minus soluta nesciunt magni, molestias magnam doloremque quam iure sint itaque maxime.
+        Consequuntur quas harum dolorum hic maiores quo vero unde. Ad, dolores! Perferendis, quasi non in accusantium, asperiores consectetur corrupti aliquid recusandae, eius optio necessitatibus sint facere quia facilis! Ad, rerum.
+        Omnis, nesciunt quis neque facere nam laudantium. Alias maxime a sapiente fugiat sequi facilis iusto, nihil accusamus non. Eum, similique assumenda dolorum magnam iste odio fuga placeat illum rerum excepturi!
+        Temporibus enim maxime aliquam cumque possimus voluptate cum! Temporibus enim fugit omnis doloremque, dolor saepe odio ullam incidunt et nemo. Veritatis inventore accusantium voluptatum pariatur quasi cupiditate iste laboriosam iure.
+        Quam tempore nemo repellat in nesciunt repudiandae nam asperiores harum quidem. Molestias nulla ipsam illo sed qui aliquam expedita debitis enim, aut corrupti dignissimos asperiores fuga delectus quibusdam distinctio nam?
+        At ad est adipisci magnam rerum cupiditate corrupti aut dicta quasi. Possimus, corporis culpa harum at molestiae cumque deleniti repellendus dolorem blanditiis totam reiciendis illum voluptatem consequatur maiores, nobis provident.
+    </p>
+    <script>alert("hello form the body tag");</script> -->
+
+
+  
+    <p id="1">
+        <!-- welcome to day 1 of ES6!  -->
+    </p>
+  <!-- <script>
+        var ele = document.getElementById("1")
+        ele.innerText = "Welcome Enid"
+        console.log(ele)
+    </script> -->
+</body>
+</html>
